@@ -24,7 +24,7 @@ export const Name = styled.Text`
   font-size: 18px;
   padding: 0 10px;
   color: ${colors.text};
-  font-family: "Barlow";
+  font-family: "Barlow-Medium";
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -37,5 +37,5 @@ export const Button = styled.TouchableOpacity`
 export const BTitle = styled.Text`
   color: white;
   text-align: center;
-  font-family: "Barlow";
+  font-family: "Barlow-Medium";
 `;

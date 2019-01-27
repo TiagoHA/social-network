@@ -1,4 +1,5 @@
 import * as React from "react";
+import { View } from "react-native";
 import styled from "styled-components/native";
 import colors from "src/colors/colors";
 import {
@@ -8,7 +9,9 @@ import {
   Title,
   Subtitle,
   TextButton,
-  Button
+  Button,
+  Col,
+  RedLine
 } from "./styles";
 
 interface Props {
@@ -23,6 +26,9 @@ export default function Header(props: Props) {
     <Container>
       <BlueLine>
         <WhiteLine>
+          <Col>
+            <RedLine />
+          </Col>
           <Title>{title}</Title>
         </WhiteLine>
         <Subtitle>{subtitle}</Subtitle>

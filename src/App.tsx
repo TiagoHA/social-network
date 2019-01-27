@@ -1,11 +1,11 @@
 import * as React from "react";
 import { FlatList } from "react-native";
-import styled from "styled-components/native";
 import Header from "./components/header";
 import ListTile from "./components/ListTile";
 import Api from "src/api";
 import { Users, User } from "./models/Feed";
 import Loading from "./components/Loading";
+import { Container } from "./styles";
 
 interface Props {}
 
@@ -43,13 +43,17 @@ export default class App extends React.Component<Props, State> {
           <FlatList
             data={this.state.users}
             keyExtractor={this.keyExtractor}
-            renderItem={({ item }) => (
-              <ListTile
-                name={item.name}
-                image={item.image}
-                isOpacity={isOpacity(item.id)}
-              />
-            )}
+            renderItem={({ item }) => {
+              const user: User = item;
+              return (
+                <ListTile
+                  id={user.id}
+                  name={user.name}
+                  image={user.image}
+                  isOpacity={Opacity(user.id)}
+                />
+              );
+            }}
           />
         </Loading>
       </Container>
@@ -57,13 +61,7 @@ export default class App extends React.Component<Props, State> {
   }
 }
 
-const Container = styled.View`
-  flex: 1;
-  background-color: white;
-  flex-direction: column;
-`;
-
-function isOpacity(number) {
+function Opacity(number: number): boolean {
   if (number === 0) return true;
   if (number) return number % 2 === 0;
   return false;
