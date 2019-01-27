@@ -28,7 +28,7 @@ export default class App extends React.Component<Props, State> {
     await Api.fetch().then(users => this.setState({ loading: false, users }));
   };
 
-  keyExtractor = item => item.name;
+  keyExtractor = item => String(item.id);
 
   render() {
     const { loading } = this.state;
@@ -45,7 +45,6 @@ export default class App extends React.Component<Props, State> {
             keyExtractor={this.keyExtractor}
             renderItem={({ item }) => (
               <ListTile
-                key={item.id}
                 name={item.name}
                 image={item.image}
                 isOpacity={isOpacity(item.id)}
@@ -64,7 +63,8 @@ const Container = styled.View`
   flex-direction: column;
 `;
 
-function isOpacity({ number }) {
-  if (!number) return false;
-  return number % 2 === 0;
+function isOpacity(number) {
+  if (number === 0) return true;
+  if (number) return number % 2 === 0;
+  return false;
 }
