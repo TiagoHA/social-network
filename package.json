@@ -8,6 +8,8 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "@types/styled-components": "^4.1.6",
+    "color": "^3.1.0",
     "react": "16.6.3",
     "react-native": "0.58.1",
     "styled-components": "^4.1.3"
