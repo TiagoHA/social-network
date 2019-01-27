@@ -3,7 +3,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es6"],
     "moduleResolution": "node",
@@ -12,8 +11,9 @@
     "target": "esnext",
     "strictNullChecks": true,
     "noImplicitAny": false,
+    "baseUrl": "./",
     "noEmitOnError": true,
-    "baseUrl": "./"
+    "isolatedModules": false
   },
   "exclude": ["node_modules"]
 }
