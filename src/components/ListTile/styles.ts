@@ -25,6 +25,7 @@ export const Name = styled.Text`
   padding: 0 10px;
   color: ${colors.text};
   font-family: "Barlow-Medium";
+  height: 30px;
 `;
 
 export const Button = styled.TouchableOpacity`

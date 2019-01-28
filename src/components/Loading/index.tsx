@@ -1,5 +1,6 @@
 import * as React from "react";
 import { View, ActivityIndicator } from "react-native";
+import colors from 'src/colors/colors';
 
 interface Props {
   loading: boolean;
@@ -17,7 +18,7 @@ export default function Loading(props) {
         marginTop: 10
       }}
     >
-      <ActivityIndicator size="large" color="#0000ff" />
+      <ActivityIndicator size="large" color={colors.primary} />
     </View>
   );
 }
