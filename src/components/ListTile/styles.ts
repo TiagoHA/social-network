@@ -33,6 +33,8 @@ export const Button = styled.TouchableOpacity`
     props.clicked ? colors.secondary : colors.primary};
   padding: 3px 7px;
   width: 90px;
+  height: 25px;
+ align-content: center;
 `;
 
 export const BTitle = styled.Text`
