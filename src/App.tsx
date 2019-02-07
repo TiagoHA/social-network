@@ -25,7 +25,8 @@ export default class App extends React.Component<Props, State> {
 
   fetchUsers = async () => {
     this.setState({ loading: true });
-    await Api.fetch().then(users => this.setState({ loading: false, users }));
+    const users = await Api.fetch();
+    this.setState({ loading: false, users })
   };
 
   keyExtractor = item => String(item.id);
