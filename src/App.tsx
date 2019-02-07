@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FlatList } from "react-native";
-import Header from "./components/header";
+import Header from "./components/Header";
 import ListTile from "./components/ListTile";
 import Api from "src/api";
 import { Users, User } from "./models/Feed";

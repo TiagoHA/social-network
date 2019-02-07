@@ -56,7 +56,7 @@ export const Col = styled.View`
 
 export const RedLine = styled.View`
   border-left-color: ${colors.secondary};
-  border-left-width: ${borderWidth * 2}px;
+  border-left-width: ${borderWidth}px;
   flex: 1;
   margin: 5px 0;
   left: -5px;
